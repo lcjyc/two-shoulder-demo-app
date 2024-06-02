@@ -5,9 +5,10 @@ import { FaTrash } from "react-icons/fa";
 import SupplyDialog from "./SupplyDialog";
 
 const FeedDetailDialog = ({ open, onClose }) => {
-  if (!open) return null;
   const [swipedIndex, setSwipedIndex] = useState(null);
   const [supplyDialog, setSupplyDialog] = useState(false);
+
+  if (!open) return null;
 
   const handleStart = (e) => {
     const clientX = e.touches ? e.touches[0].clientX : e.clientX;

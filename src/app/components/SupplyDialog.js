@@ -2,10 +2,7 @@
 import { useState } from "react";
 
 const SupplyDialog = ({ open, onClose }) => {
-  if (!open) return null;
-
   const [supplyIndex, setSupplyIndex] = useState(0);
-
   const [supplyList, setSupplyList] = useState([
     {
       supply_name: "飼料",
@@ -56,6 +53,8 @@ const SupplyDialog = ({ open, onClose }) => {
       ],
     },
   ]);
+
+  if (!open) return null;
 
   const handleSupplyClick = (e, index) => {
     setSupplyIndex(index);
