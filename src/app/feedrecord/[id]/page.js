@@ -68,7 +68,7 @@ const BatchDetail = () => {
   };
   return (
     <>
-      <div className="h-screen">
+      <div className="h-[calc(100vh-68px)]">
         <Link href={"/feedrecord"}>
           <IoIosArrowBack className="text-grey-blue absolute top-3 left-2 text-3xl z-10 stroke-1" />
         </Link>
@@ -95,17 +95,17 @@ const BatchDetail = () => {
           <h1 className="text-slate-400">2022/01/20　12:00</h1>
           <FaCalendar className="text-teal-400" />
         </div>
-        <h1 className="text-slate-400 mt-5 ml-2 -mb-1 font-semibold">
+        <h1 className="text-slate-400 mt-5 ml-2 mb-2 font-semibold">
           目前共{dateData.length}筆資料
         </h1>
-        <div className="flex ml-2 h-4/6">
+        <div className="flex ml-2 h-3/5">
           <div
             ref={batchRef}
             className="flex flex-col overflow-y-hidden h-full w-full"
           >
             {dateData.map((d, index) => (
               <div
-                className="relative flex items-center justify-start w-80 bg-sky-50 cursor-pointer px-4 py-3 mt-4 rounded-3xl font-semibold shadow-md overflow-hidden"
+                className="relative flex items-center justify-start w-80 bg-sky-50 cursor-pointer p-4 mb-4 rounded-3xl font-semibold shadow-md overflow-hidden"
                 key={index}
                 onTouchStart={(e) => handleStart(e)}
                 onTouchMove={(e) => handleMove(e, index)}
@@ -131,12 +131,12 @@ const BatchDetail = () => {
             ))}
           </div>
           <div className="absolute right-4 top-5/6 h-4/6 flex flex-col items-center justify-between ml-2">
-            <button onClick={scrollUp} className="text-teal-200 text-3xl mt-5">
+            <button onClick={scrollUp} className="text-teal-200 text-3xl">
               <FaArrowUp />
             </button>
             <button
               onClick={scrollDown}
-              className="text-teal-200 text-3xl mb-6"
+              className="text-teal-200 text-3xl mb-24"
             >
               <FaArrowDown />
             </button>

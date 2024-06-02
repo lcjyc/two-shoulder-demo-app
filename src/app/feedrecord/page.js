@@ -60,7 +60,7 @@ const Feedrecord = () => {
   };
 
   return (
-    <div className="h-screen">
+    <div className="h-[calc(100vh-68px)]">
       <Link href={"/"}>
         <IoIosArrowBack className="text-grey-blue absolute top-3 left-2 text-3xl z-10 stroke-1" />
       </Link>
@@ -83,14 +83,14 @@ const Feedrecord = () => {
           <FaSearch className="text-teal-500 text-2xl" />
         </div>
       </div>
-      <div className="flex mt-4 h-3/4">
+      <div className="flex h-3/4">
         <div
           ref={batchRef}
-          className="flex flex-col overflow-y-hidden h-full w-full"
+          className="flex flex-col overflow-y-hidden h-full w-full mt-4"
         >
           {batchData.map((b, index) => (
             <Link href={`/feedrecord/${b.id}`} key={index}>
-              <div className="w-8/12 mx-auto my-4 bg-red-300 rounded-lg shadow-xl p-3">
+              <div className="w-8/12 mx-auto mb-4 bg-red-300 rounded-lg shadow-xl p-3">
                 <div className="flex justify-between items-center">
                   <h2 className="text-white text-2xl">{b.id}</h2>
                   <MdEdit className="text-white text-2xl" />
@@ -105,7 +105,7 @@ const Feedrecord = () => {
           <button onClick={scrollUp} className="text-teal-200 text-3xl mt-4">
             <FaArrowUp />
           </button>
-          <button onClick={scrollDown} className="text-teal-200 text-3xl mb-4">
+          <button onClick={scrollDown} className="text-teal-200 text-3xl mb-10">
             <FaArrowDown />
           </button>
         </div>

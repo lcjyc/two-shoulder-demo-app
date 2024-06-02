@@ -110,11 +110,11 @@ const SupplyDialog = ({ open, onClose }) => {
         <h1 className="text-slate-400 text-xl font-semibold mt-0.5 ml-2">
           第3批次-01白蝦池
         </h1>
-        <h1 className="text-slate-400 text-xl font-semibold mt-6 ml-10">
+        <h1 className="text-slate-400 text-xl font-semibold mt-3 ml-10">
           2022/01/20 11:50
         </h1>
         <div className="h-3/4 overflow-y-auto ">
-          <div className="flex my-8">
+          <div className="flex mt-4 mb-2">
             {supplyList.map((s, index) => (
               <button
                 className={`${
@@ -165,13 +165,13 @@ const SupplyDialog = ({ open, onClose }) => {
           </div>
         </div>
         <button
-          className="absolute bottom-10 left-10 bg-teal-400 text-white hover:bg-white hover:text-teal-400 text-xl rounded-3xl w-18 py-2 px-4 shadow-2xl"
+          className="absolute bottom-6 left-10 bg-teal-400 text-white hover:bg-white hover:text-teal-400 text-xl rounded-3xl w-18 py-2 px-3 shadow-2xl"
           onClick={onClose}
         >
           取消
         </button>
         <button
-          className="absolute bottom-10 right-10 bg-teal-900 text-white hover:bg-white hover:text-teal-900 text-xl rounded-3xl w-18 py-2 px-4 shadow-2xl"
+          className="absolute bottom-6 right-10 bg-teal-900 text-white hover:bg-white hover:text-teal-900 text-xl rounded-3xl w-18 py-2 px-3 shadow-2xl"
           onClick={onClose}
         >
           確定

@@ -124,10 +124,10 @@ const FeedDetailDialog = ({ open, onClose }) => {
           <h1 className="text-slate-400 text-xl font-semibold mt-0.5 ml-2">
             第3批次-01白蝦池
           </h1>
-          <h1 className="text-slate-400 text-xl font-semibold my-6 ml-10">
+          <h1 className="text-slate-400 text-xl font-semibold my-2 ml-10">
             2022/01/20
           </h1>
-          <div className="flex flex-col h-3/4 overflow-y-auto">
+          <div className="flex flex-col h-4/6 overflow-y-auto">
             {detailData.map((d, index) => (
               <div
                 className="border border-slate-400 text-slate-400 text-xl font-semibold rounded-md flex"
@@ -164,7 +164,7 @@ const FeedDetailDialog = ({ open, onClose }) => {
             ))}
           </div>
           <button
-            className="absolute bottom-10 right-10 bg-teal-900 text-white hover:bg-white hover:text-teal-900 text-xl rounded-3xl w-18 py-2 px-4 shadow-2xl"
+            className="absolute bottom-6 right-10 bg-teal-900 text-white hover:bg-white hover:text-teal-900 text-xl rounded-3xl w-18 py-2 px-3 shadow-2xl"
             onClick={onClose}
           >
             確定
